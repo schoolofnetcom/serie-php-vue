@@ -22,6 +22,8 @@ $query = 'INSERT INTO users (name, email) VALUES (?, ?);';
 
 $stmt = $pdo->prepare($query);
 $stmt->execute([
+    $name,
+    $email
 ]);
 
 return [

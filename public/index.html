@@ -7,18 +7,9 @@
     <title>PHP e Vue</title>
 </head>
 <body>
-    
-    <script>
-        const promise = fetch('/api.php?id=1');
+    <div id="app">Carregando</div>
 
-        promise.then(async (response) => {
-            const data = await response.json();
-            if (response.status == 422) {
-               alert(data.msg)
-            } else {
-                console.log(data);
-            }
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
