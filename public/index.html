@@ -9,12 +9,16 @@
 <body>
     
     <script>
-        const promise = fetch('/api.php');
+        const promise = fetch('/api.php?id=1');
 
-        promise.then((response) => response.json())
-            .then((data) => {
+        promise.then(async (response) => {
+            const data = await response.json();
+            if (response.status == 422) {
+               alert(data.msg)
+            } else {
                 console.log(data);
-            });
+            }
+        });
     </script>
 </body>
 </html>

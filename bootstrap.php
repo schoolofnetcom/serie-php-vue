@@ -1,6 +1,6 @@
 <?php
 
-$response = [];
+$pdo = require __DIR__ . '/connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $response = require __DIR__ . '/src/save_user.php';
